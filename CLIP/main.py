@@ -117,8 +117,7 @@ for dataset in [cifar10,ood_dataset]:
         image_feature /= image_feature.norm()
         image_features.append(image_feature)
         image_labels.append(class_id)
-        if i == 9999:
-            break
+
     image_features = torch.stack(image_features, dim=1).to(device)
     image_features = image_features.squeeze()
 
